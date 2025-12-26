@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/header";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 
 const InterFont = Inter({ subsets: ["latin"] });
@@ -17,12 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={InterFont.className }
+    <ClerkProvider>
+
+    
+      <html lang="en">
+        <body
+          className={InterFont.className }
       >
         {/*header*/}
-        <header> </header>
+        <header> sign up</header>
         {/*for accesibility*/}
         <main className="min-h-screen "> 
          {children} 
@@ -38,5 +42,6 @@ export default function RootLayout({
         </footer>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
