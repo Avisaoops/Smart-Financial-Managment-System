@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Header from "@/components/header";
+import Header from "../components/header";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -23,7 +23,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <head>
-          <link rel="icon" href="/logodesign.jpg" sizes="any" />
+          <link rel="icon" href="/logo.png" sizes="any" />
         </head>
         <body className={`${InterFont.className}`}>
           <Header />

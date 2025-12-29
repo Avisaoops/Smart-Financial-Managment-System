@@ -1,17 +1,18 @@
 
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs'
 import React from 'react'
-import { LayoutDashboard, Link, PenBox } from 'lucide-react';
+import { LayoutDashboard, PenBox } from 'lucide-react';
+import Link from "next/link";
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { Sign } from 'crypto';
 
 const Header = () => {
   return (
-    <div className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 boreder-b'>
-      <nav className='container mx-auto px-4 flex items-center justify-between h-16'>
+    <header className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b'>
+      <nav className='container mx-auto px-4 flex items-center justify-between '>
         <Link href="/">
-          <Image src='/logodesign.jpg' alt="Logo" width={200} height={60} 
+          <Image src={'/logo.png'} alt="Logo" width={100} height={30} 
           className='h-12 w-auto object-contain' priority/>
         </Link>
         
@@ -46,7 +47,7 @@ const Header = () => {
             </SignedIn>
         </div> 
          </nav>          
-    </div>
+    </header>
   )
 }
 
