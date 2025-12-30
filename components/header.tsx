@@ -12,7 +12,7 @@ const Header = () => {
     <header className='fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b'>
       <nav className='container mx-auto px-4 flex items-center justify-between '>
         <Link href="/">
-          <Image src={'/logo.png'} alt="Logo" width={100} height={30} 
+          <Image src={'/logo.png'} alt="Logo" width={500} height={80} 
           className='h-12 w-auto object-contain' priority/>
         </Link>
         
